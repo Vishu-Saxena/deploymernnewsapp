@@ -17,7 +17,7 @@ app.use(cors(
 dotenv.config();
 
 app.get('/' , (req , res)=>{
-    res.send('<h1> mansi saxena </h1>');
+    res.json('mansi saxena');
 })
 app.use(express.json());// req.body ke ander se data json format mai ata h , agr ye function use nhi kiya toh error ayega
 
