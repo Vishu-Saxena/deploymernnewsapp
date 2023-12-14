@@ -7,7 +7,13 @@ const videoRoute = require('./router/videoRoute');
 const cors = require('cors');
 const app = express();
 // app.use(cors());
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://deploymernnewsapp-client.vercel.app"],
+        methods: ["POST", "GET" , "PUT" , "DELETE"],
+        credentials: true
+    }
+));
 dotenv.config();
 
 app.get('/' , (req , res)=>{
