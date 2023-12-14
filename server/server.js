@@ -7,13 +7,7 @@ const videoRoute = require('./router/videoRoute');
 const cors = require('cors');
 const app = express();
 // app.use(cors());
-app.use(cors(
-    {
-        origin: [""],
-        methods: ["POST", "GET" , "PUT" ,"DELETE"],
-        credentials: true
-    }
-));
+app.use(cors());
 dotenv.config();
 
 app.get('/' , (req , res)=>{

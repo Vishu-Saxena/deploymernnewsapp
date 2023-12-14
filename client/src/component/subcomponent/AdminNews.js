@@ -3,17 +3,21 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Newcard from './Newcard';
 import { useNewsContex } from '../../context/AllnewsContex';
+import { useAuthContext } from '../../context/AuthuserContext';
 
 const AdminNews = () => {
   // getting show toast funcion
   const {toastfn , errortoastfn} = useNewsContex();
+
+  const {userDetails} = useAuthContext();
+    const {_id} = userDetails;
 
   const [admnNews , setAmNews] = useState([]);
   // console.log(admnNews);
     // funtion to get all news of admin
     const adminNews = async()=>{
       try {
-          const res = await axios.get('https://deploymernnewsapp.vercel.app/api/v1/news/get-news/65490a0f2189dc711cdea7b9')
+          const res = await axios.get(`https://deploymernnewsapp.vercel.app/api/v1/news/get-news/${_id}`);
           if(res?.data?.success){
             setAmNews(res.data.findNews);
           }else{
