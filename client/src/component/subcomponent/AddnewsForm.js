@@ -35,6 +35,7 @@ const AddnewsForm = () => {
         newsData.append("adminId" , userDetails._id);
         console.log("newsData",newsData);
         const res = await axios.post('https://deploymernnewsapp.vercel.app/api/v1/news/add-news' , newsData );
+        console.log(res);
         if(res?.data?.success){
           toastfn("news added successfully");
           setNews({});
