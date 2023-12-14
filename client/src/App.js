@@ -13,6 +13,7 @@ import Dashboard from "./component/Dashboard";
 import NewsUpdate from "./component/NewsUpdate";
 import DetailnedNews from "./component/DetailnedNews";
 import Videos from "./component/subcomponent/Videos";
+import axios from "axios";
 
 function App() {
   // const {generalNews , name} = useNewsContex();
@@ -22,6 +23,7 @@ function App() {
   // const science = useScienceNews();
   // const Busines = useBusinesContext();
   // // console.log(generalNews , Enews , usa , sports ,science , Busines);
+  axios.defaults.withCredentials= true;
   return (
     <>
     <Navbar/>

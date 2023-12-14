@@ -5,6 +5,7 @@ import { useAuthContext } from '../../context/AuthuserContext';
 import { useNewsContex } from '../../context/AllnewsContex';
 
 const DashForm = ({userDetails}) => {
+  axios.defaults.withCredentials= true;
     // state to handle registration details
     const[updateUser , setUpdateuser] = useState(userDetails);
     const {token} = useAuthContext();
