@@ -40,7 +40,7 @@ const Login = () => {
                 res = await axios.post('https://deploymernnewsapp.vercel.app/api/v1/auth/login' , {...regUser});
                console.log(res);
             }else{
-                res = await axios.post('https://deploymernnewsapp.vercel.app/api/v1/auth//admin-login' , {...regUser});
+                res = await axios.post('https://deploymernnewsapp.vercel.app/api/v1/auth/admin-login' , {...regUser});
                console.log(res);
       
             }
