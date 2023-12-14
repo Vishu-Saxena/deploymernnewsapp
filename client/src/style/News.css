@@ -1,0 +1,10 @@
+.managewidht{
+    width: 100%;
+}
+
+@media screen and (max-width : 575px) {
+    .managewidht{
+        width: 120%;
+    }
+}
+

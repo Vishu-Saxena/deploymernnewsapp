@@ -1,0 +1,11 @@
+.vdiframe{
+    width: 100%;
+    height: 15rem;
+}
+.vdcard{
+    width: 100%;
+    margin: auto;
+    height: 15rem;
+    overflow: hidden;
+    cursor: pointer;
+}

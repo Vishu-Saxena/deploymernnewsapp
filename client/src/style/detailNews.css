@@ -1,0 +1,28 @@
+.detailimg{
+    width: 100%;
+    height: 20rem;
+}
+.desc{
+    font-style: italic;
+    font-weight: bolder;
+
+}
+.txtstyle{
+    text-decoration: underline #fd7e14 ;
+}
+
+@media screen and (max-width : 650px) {
+    .desc{
+        font-size: smaller;
+    }
+    .cnt{
+        font-size: small;
+    }
+    .txtstyle{
+        font-size: 20px;
+    }
+    .detailimg{
+        height: 15rem;
+    }
+   
+}

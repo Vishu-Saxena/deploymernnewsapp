@@ -1,0 +1,22 @@
+.blckbg{
+    background-color: black;
+    color: #fd7e14;
+}
+.btn-clr{
+    background-color: #fd7e14;
+    color: white;
+    border: none;
+}
+.btn-clr:hover{
+    background-color: white ;
+    color: #fd7e14;
+    font-weight: bolder;
+}
+
+.pcolr{
+    color: #fd7e14;
+}
+
+.border-sn{
+    border: #fd7e14 1px solid;
+}

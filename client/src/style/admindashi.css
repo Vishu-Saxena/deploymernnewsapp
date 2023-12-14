@@ -1,0 +1,33 @@
+.crdbtn{
+    font-size: smaller;
+    border: none;
+}
+
+
+
+
+.activeli{
+    background: #fd7e14 !important;
+    border: none !important;
+}
+
+.menuhght{
+    height: 80vh;
+}
+
+@media screen and (max-width : 767px) {  
+    .menuhght{
+        height: 30vh;
+    }
+    .texthead{
+        font-size: small;
+        font-weight: bolder;
+    }
+   
+}
+@media screen and (max-width : 500px) {  
+    .fntsz{
+       font-size: smaller;
+    }
+   
+}

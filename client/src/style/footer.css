@@ -1,0 +1,57 @@
+.prntlinkdiv{
+    width: 90%;
+    margin: auto;
+    border-bottom: 1px solid rgb(175, 175, 175);
+}
+.links{
+    color: #ffff;
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.link{
+    color: #ffff;
+    text-decoration: none;
+}
+.link:hover{
+    color: #fd7e14;
+}
+
+.links:hover{
+    color: #fd7e14;
+}
+.linkDiv{
+    border-left:  rgb(175, 175, 175) 1px solid;
+    margin: 0.5rem 0 ;
+}
+.prntlinkdiv2{
+    display: none;
+    width: 90%;
+    margin: auto;
+    border-bottom: 1px solid rgb(175, 175, 175);
+
+}
+.heading{
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width : 650px) {
+    .prntlinkdiv{
+        width: 100%;
+    }
+    .prntlinkdiv2{
+        display: flex;
+    }
+    .dis{
+        display: none;
+    }
+    .links{
+        font-size: 0.5rem;
+    }
+    .heading{
+        font-size: 1rem;
+    }
+   
+}
