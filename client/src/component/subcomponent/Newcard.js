@@ -14,7 +14,7 @@ const Newcard = (props) => {
     const deleteNews = async(id)=>{
       // e.preventDefault();
       try {
-        const res = await axios.delete(`http://localhost:8080/api/v1/news/delete-news/${id}`);
+        const res = await axios.delete(`https://deploymernnewsapp.vercel.app/api/v1/news/delete-news/${id}`);
         if(res?.data?.success){
           toastfn("news deleted successfuly");
           window.location.reload(false);
@@ -30,7 +30,7 @@ const Newcard = (props) => {
     <div className="col-md-6 col-12 mt-2">
         <Link to={'/'} target="_blank" style={{'color' : "black" , 'textDecoration' : "none"}}>
           <div className="card nwscrd" style={{'height' : '20rem'}}>
-              <img src={`http://localhost:8080/api/v1/news/get-image/${news._id}`} className="card-img-top" alt="..." />
+              <img src={`https://deploymernnewsapp.vercel.app/api/v1/news/get-image/${news._id}`} className="card-img-top" alt="..." />
 
               <div className="card-body ">
                   <h5 className="card-title titletext">{news?.title ? news.title : ""}</h5>

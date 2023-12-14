@@ -44,7 +44,7 @@ const NewsContxtVal = (props)=>{
     // fucntion to fetch all the newses
     const newsFunc =async()=>{
         try {
-            const res = await axios.get('http://localhost:8080/api/v1/news/get-all');
+            const res = await axios.get('https://deploymernnewsapp.vercel.app/api/v1/news/get-all');
             if(res.data.success){
                 dispatch({type :'ALL' , payload : res.data.getNews});
             }else{
@@ -58,7 +58,7 @@ const NewsContxtVal = (props)=>{
     // function to fetch all videos news
     const videoNews = async()=>{
         try {
-            const res = await axios.get('http://localhost:8080/api/v1/video/getvideo');
+            const res = await axios.get('https://deploymernnewsapp.vercel.app/api/v1/video/getvideo');
             console.log(res.data.getvideo);
             if(res.data.success){
                 dispatch({type :'ALLVIDEO' , payload : res.data.videos});
@@ -74,7 +74,7 @@ const NewsContxtVal = (props)=>{
     // funtion to make headline list;
     const headlinefunc =async()=>{
         try {
-            const res = await axios.get('http://localhost:8080/api/v1/news/get-headlines');
+            const res = await axios.get('https://deploymernnewsapp.vercel.app/api/v1/news/get-headlines');
             if(res.data.success){
                 dispatch({type :'HEADLINE' , payload : res.data.headline});
             }else{

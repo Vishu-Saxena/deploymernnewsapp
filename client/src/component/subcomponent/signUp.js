@@ -31,10 +31,10 @@ const SignUp = () => {
             let res = '';
             if(location.pathname !== '/admin-sign-up'){
                 console.log("in user fntion");
-                 res = await axios.post('http://localhost:8080/api/v1/auth/register' , {...regUser});
+                 res = await axios.post('https://deploymernnewsapp.vercel.app/api/v1/auth/register' , {...regUser});
             }else{
                 console.log("in admin funtion");
-                 res = await axios.post('http://localhost:8080/api/v1/auth/admin-register' , {...regUser});
+                 res = await axios.post('https://deploymernnewsapp.vercel.app/api/v1/auth/admin-register' , {...regUser});
             }
             console.log(res);
             if(res?.data?.success){

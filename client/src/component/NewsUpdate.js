@@ -21,7 +21,7 @@ const NewsUpdate = () => {
         try {
             
             console.log(id);
-            const res = await axios.get(`deploymernnewsapp.vercel.app/api/v1/news/get-single-news/${id}`);
+            const res = await axios.get(`https://deploymernnewsapp.vercel.app/api/v1/news/get-single-news/${id}`);
             console.log(res);
             if(res?.data?.success){
                 setNews(res.data.news);
@@ -46,7 +46,7 @@ const NewsUpdate = () => {
         newsData2.append("content", newsdata.content);
         if(image){newsData2.append("image", image)};
         console.log("newsData",newsData2);
-        const res = await axios.post(`http://localhost:8080/api/v1/news/update-news/${id}` , newsData2 );
+        const res = await axios.post(`https://deploymernnewsapp.vercel.app/api/v1/news/update-news/${id}` , newsData2 );
 
         if(res?.status === 200 && res?.data?.success ){
           toastfn("News updated successfully.");
@@ -110,7 +110,7 @@ const NewsUpdate = () => {
       </label>
       <div className="m-3 d-flex justify-content-center">
         {image?.name &&<img src={ URL.createObjectURL(image)} alt="product_photo" width={"200px"} height={"100px"}  className="img img-responsive "/>}
-            { newsdata._id ? !image  && <img src={newsdata ? `http://localhost:8080/api/v1/news/get-image/${newsdata._id}` : ""} style={{'width' : "200px" , 'height' : "100px"}}/> : null}
+            { newsdata._id ? !image  && <img src={newsdata ? `https://deploymernnewsapp.vercel.app/api/v1/news/get-image/${newsdata._id}` : ""} style={{'width' : "200px" , 'height' : "100px"}}/> : null}
       </div>
     </div>
         <div className='d-flex d-flex justify-content-center mb-3'><button type="submit" className="btn btn-primary m-auto btn-clr" style={{'width' : "90%"}} onClick={handleOnsubmit}>Update News</button></div>

@@ -17,7 +17,7 @@ const Adminvideos = () => {
     // function to get the videos
     const getvideobyauthor= async()=>{
         try {
-            const res = await axios.get(`http://localhost:8080/api/v1/video/getvideo/${_id}`);
+            const res = await axios.get(`https://deploymernnewsapp.vercel.app/api/v1/video/getvideo/${_id}`);
             if(res?.data?.success){
                 setVd(res.data.videos);
             }else{

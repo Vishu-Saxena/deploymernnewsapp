@@ -9,7 +9,7 @@ const VideoCard2 = (props) => {
      const {toastfn , errortoastfn, setVds} = useNewsContex();
     const deleteNews = async()=>{
         try {
-            const res = await axios.delete(`http://localhost:8080/api/v1/video/deleteVideo/${_id}`);
+            const res = await axios.delete(`https://deploymernnewsapp.vercel.app/api/v1/video/deleteVideo/${_id}`);
             if(res.data.success){
                 toastfn("Video deleted successfully.");
                 setVds("changed");

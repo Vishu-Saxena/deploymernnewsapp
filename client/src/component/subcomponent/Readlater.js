@@ -16,9 +16,9 @@ const Readlater = ({type}) => {
         try {
           let res = '';
           if(type === "user"){
-             res = await axios.get(`http://localhost:8080/api/v1/auth/getallreadlater/${userDetails._id}`);
+             res = await axios.get(`https://deploymernnewsapp.vercel.app/api/v1/auth/getallreadlater/${userDetails._id}`);
           }else{
-             res = await axios.get(`http://localhost:8080/api/v1/auth/getallreadlater-admin/${userDetails._id}`);
+             res = await axios.get(`https://deploymernnewsapp.vercel.app/api/v1/auth/getallreadlater-admin/${userDetails._id}`);
           }
           console.log(res);
           if(res?.data?.success){

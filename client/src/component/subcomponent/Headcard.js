@@ -8,7 +8,7 @@ const Headcard = (props) => {
   return (
     <Link to={`/news/${headlines.category}/${headlines._id}`} target="_blank" style={{'color' : "none" , 'textDecoration' : "none"}}>
     <div className={`card text-bg-dark ${classval ? 'lgBox' : 'smlBox'}`} >
-    <img src={`http://localhost:8080/api/v1/news/get-image/${headlines._id}`} className="card-img" alt="..."/>
+    <img src={`https://deploymernnewsapp.vercel.app/api/v1/news/get-image/${headlines._id}`} className="card-img" alt="..."/>
     <div className="card-img-overlay" >
         <h5 className={`card-title ${classval ? 'lgHeadText' : 'smlHeadText'}`}>{headlines.title}</h5>
         <p className={`card-text ${classval ? 'lgText' : 'smlText'}`}> { classval ?  headlines.discription : headlines.discription.substring(0, 70)+'...'} </p>

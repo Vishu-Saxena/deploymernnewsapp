@@ -24,7 +24,7 @@ const Addvideo = () => {
         e.preventDefault();
         console.log("hadle submit");
         try {
-          const res = await axios.post('http://localhost:8080/api/v1/video/addvideo' ,{ ...news ,adminId: _id} );
+          const res = await axios.post('https://deploymernnewsapp.vercel.app/api/v1/video/addvideo' ,{ ...news ,adminId: _id} );
           if(res.status === 203){
              errortoastfn("required fields are not filled properly");
              return;

@@ -22,7 +22,7 @@ const DashForm = ({userDetails}) => {
     const handleOnsubmit = async(e)=>{
       e.preventDefault();
       try {
-        const res = await axios.put('http://localhost:8080/api/v1/auth/update-user' ,  {...updateUser} );
+        const res = await axios.put('https://deploymernnewsapp.vercel.app/api/v1/auth/update-user' ,  {...updateUser} );
         if(res?.data?.success){
 
           const prevData = localStorage.getItem("user")

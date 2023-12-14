@@ -13,7 +13,7 @@ const AdminNews = () => {
     // funtion to get all news of admin
     const adminNews = async()=>{
       try {
-          const res = await axios.get('http://localhost:8080/api/v1/news/get-news/65490a0f2189dc711cdea7b9')
+          const res = await axios.get('https://deploymernnewsapp.vercel.app/api/v1/news/get-news/65490a0f2189dc711cdea7b9')
           if(res?.data?.success){
             setAmNews(res.data.findNews);
           }else{
