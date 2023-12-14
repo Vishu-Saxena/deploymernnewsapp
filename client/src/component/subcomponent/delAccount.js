@@ -18,7 +18,7 @@ const DelAccount = ({userType}) => {
       if(userType==='admin'){
         res = await axios.delete(`https://deploymernnewsapp.vercel.app/api/v1/auth/delAdmin/${userDetails._id}`);
       }else{
-        res = await axios.delete(`https://deploymernnewsapp.vercel.app/api/v1/auth//deluser/${userDetails._id}`);
+        res = await axios.delete(`https://deploymernnewsapp.vercel.app/api/v1/auth/deluser/${userDetails._id}`);
       }
       if(res?.data?.success){
        toastfn("your account is deleted successfully.");
