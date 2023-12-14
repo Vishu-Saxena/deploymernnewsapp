@@ -13,7 +13,7 @@ const DetailnedNews = () => {
     // fucntion to fetch the news details
     const newsInfo = async(id)=>{
         try {
-            const res = await axios.get(`http://localhost:8080/api/v1/news/get-single-news/${id}`);
+            const res = await axios.get(`deploymernnewsapp.vercel.app/api/v1/news/get-single-news/${id}`);
             setNews(res.data.news);
         } catch (error) {
             console.log(error);
