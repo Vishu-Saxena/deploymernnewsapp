@@ -2,7 +2,7 @@
   "name": "mernnewsapp",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "serve": "nodemon server.js",
     "server": "nodemon server.js",
