@@ -25,7 +25,6 @@ const DashForm = ({userDetails}) => {
       try {
         const res = await axios.put('https://deploymernnewsapp.vercel.app/api/v1/auth/update-user' ,  {...updateUser} );
         if(res?.data?.success){
-
           const prevData = localStorage.getItem("user")
           localStorage.setItem('user' , JSON.stringify({ token :token  , userDetails : updateUser}));
           toastfn("Details updated successfully");
