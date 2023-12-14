@@ -9,7 +9,7 @@ const app = express();
 // app.use(cors());
 app.use(cors(
     {
-        origin: ["https://deploymernnewsapp.vercel.app/"],
+        origin: [""],
         methods: ["POST", "GET" , "PUT" ,"DELETE"],
         credentials: true
     }
