@@ -40,7 +40,7 @@ const NewsHome = () => {
           </div>
         <div className="row mt-3">
           <h1 style={{"color" : '#ee6c02'}}> <span className='text-dark'>Vid</span>eos</h1>
-          { videos && videos.slice(0,4).map((ele , indx)=>{
+          { videos && videos.slice(0,6).map((ele , indx)=>{
             return  <VideoCard key={indx} vdo={ele}/>
           }) }
           </div>
