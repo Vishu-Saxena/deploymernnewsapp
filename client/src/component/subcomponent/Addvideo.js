@@ -22,6 +22,9 @@ const Addvideo = () => {
     }
     const handleOnsubmit= async(e)=>{
         e.preventDefault();
+        if(news.title || news.category || news.video){
+          errortoastfn("Please fill all the feilds properly .")
+        }
         console.log("hadle submit");
         try {
           const res = await axios.post('https://deploymernnewsapp.vercel.app/api/v1/video/addvideo' ,{ ...news ,adminId: _id} );
