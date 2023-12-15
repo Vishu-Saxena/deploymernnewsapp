@@ -5,5 +5,9 @@
 }
 .logo{
   width: 10rem;
-
+}
+@media screen and (max-width : 400px) {
+  .logo{
+      width: 5rem;
+  }
 }

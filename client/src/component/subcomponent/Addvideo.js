@@ -51,7 +51,7 @@ const Addvideo = () => {
 
   return (
     <div className='row my-3'>
-      <h2 className='text-center ms-1'>Add <span style={{'color' : "#ee6c02"}}> News </span></h2>
+      <h2 className='text-center ms-1'>Add <span style={{'color' : "#ee6c02"}}> Video </span></h2>
         <div className="mb-3">
             <label htmlFor="exampleFormControlInput1" className="form-label">Tittle</label>
             <input name='title' value={news.title}  type="text"  className="form-control" onChange={handleOnchange} placeholder='Title of your news post...' required/>

@@ -41,7 +41,7 @@ const AdminDash = () => {
         <div className={`col-md-8 border fntsz ${pathname !== '/dashboard/allnews' ? "d-none" : ''}`}><AdminNews/></div>
         <div className={`col-md-8 border fntsz ${pathname !== '/dashboard/allvideos' ? "d-none" : ''}`}><Adminvideos/></div>
         <div className={`col-md-8 border fntsz ${pathname !== '/dashboard/readlater' ? "d-none" : ''}`}> <Readlater type={"admin"}/> </div>
-        <div className={`col-md-8 fntsz  ${pathname !== '/dashboard/delete' ? "d-none" : ''}`}><DelAccount/></div>
+        <div className={`col-md-8 fntsz  ${pathname !== '/dashboard/delete' ? "d-none" : ''}`}><DelAccount userType={"admin"}/></div>
       </div>
       
     </div>
