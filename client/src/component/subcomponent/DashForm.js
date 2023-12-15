@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../../context/AuthuserContext';
 import { useNewsContex } from '../../context/AllnewsContex';
 
-const DashForm = ({userDetails}) => {
+const DashForm = ({userDetails , type}) => {
   axios.defaults.withCredentials= true;
     // state to handle registration details
     const[updateUser , setUpdateuser] = useState(userDetails);
@@ -23,7 +23,13 @@ const DashForm = ({userDetails}) => {
     const handleOnsubmit = async(e)=>{
       e.preventDefault();
       try {
-        const res = await axios.put('https://deploymernnewsapp.vercel.app/api/v1/auth/update-user' ,  {...updateUser} );
+        let res = '';
+        if(type=== "user"){
+          res=  await axios.put('https://deploymernnewsapp.vercel.app/api/v1/auth/update-user' ,  {...updateUser} );
+        }else{
+          res=  await axios.put('https://deploymernnewsapp.vercel.app/api/v1/auth/update-admin' ,  {...updateUser} );
+        }
+        
         if(res?.data?.success){
           const prevData = localStorage.getItem("user")
           localStorage.setItem('user' , JSON.stringify({ token :token  , userDetails : updateUser}));

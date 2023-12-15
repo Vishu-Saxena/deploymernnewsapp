@@ -19,7 +19,7 @@ const UserDash = () => {
             <Link to={'/dashboard/delete'} style={{'textDecoration' : "none"}}><li className={`list-group-item ${pathname === '/dashboard/delete'? "active activeli" : ''}`}>Delete Account</li></Link>
           </ul>
         </div>
-        <div className={`col-md-8 border fntsz ${pathname !== '/dashboard'? "d-none" : ''}`}><DashForm userDetails={userDetails} /></div>
+        <div className={`col-md-8 border fntsz ${pathname !== '/dashboard'? "d-none" : ''}`}><DashForm userDetails={userDetails} type={"user"} /></div>
         <div className={`col-md-8 border fntsz  ${pathname !== '/dashboard/readlater' ? "d-none" : ''}`}><Readlater type={"user"}/></div>
         <div className={`col-md-8 border fntsz  ${pathname !== '/dashboard/delete' ? "d-none" : ''}`}><DelAccount/></div>
       </div>

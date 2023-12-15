@@ -128,6 +128,25 @@ router.put('/update-user' , async(req , res)=>{
         return res.status(500).send({error , success : false})
     }
 });
+// route to update admin details
+router.put('/update-admin' , async(req , res)=>{
+    try {
+        const {name , email  , country, _id} = req.body;
+        if(!name || !email || !country){
+            return res.status(200).send({message : "fill all the required information properly" , success : false})
+        }
+        const updateProf = await admin.findByIdAndUpdate(_id , {name , email, country });
+        if(updateProf){
+            console.log(updateProf);
+            return res.status(200).send({message : "profile updated successfuly" , success : true , updateProf});
+        }else{
+            return res.status(500).send({message : "profile not updated successfuly" , success : false});
+        }
+    } catch (error) {
+        console.log(error);
+        return res.status(500).send({error , success : false})
+    }
+});
 
 // route to delete admin account
 
