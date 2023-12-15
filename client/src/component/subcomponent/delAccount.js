@@ -37,7 +37,7 @@ const DelAccount = ({userType}) => {
   }
   return (
     <div>
-      <h3 className='text-center mt-5 mb-3'>Are you sure, you want to delete your account.</h3>
+      <h3 className='text-center my-5 mb-3'>Are you sure, you want to delete your account.</h3>
       <form onSubmit={(e)=>e.preventDefault()} >
       <div className='d-flex justify-content-center'>
         <button className='btn btn-primary me-2' style={{'backgroundColor' : "#ee6c02" , 'border' : 'none'}} onClick={()=> navigate('/dashboard/allnews')} >No</button>

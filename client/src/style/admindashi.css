@@ -3,9 +3,6 @@
     border: none;
 }
 
-
-
-
 .activeli{
     background: #fd7e14 !important;
     border: none !important;
@@ -15,9 +12,16 @@
     height: 80vh;
 }
 
+.menuhghtuser{
+    height: 80vh;
+}
+
 @media screen and (max-width : 767px) {  
     .menuhght{
         height: 50vh;
+    }
+    .menuhghtuser{
+        height: 30vh;
     }
     .texthead{
         font-size: small;

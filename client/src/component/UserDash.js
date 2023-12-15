@@ -12,7 +12,7 @@ const UserDash = () => {
     return (
         <div className='container-fluid' style={{'minHeight' : "60vh"}}>
       <div className="row">
-        <div className="col-md-4 my-3 d-flex flex-column justify-content-center menuhght fntsz"> 
+        <div className="col-md-4 my-3 d-flex flex-column justify-content-center menuhghtuser fntsz"> 
           <ul className="list-group">
             <Link to={'/dashboard'} style={{'textDecoration' : "none"}}><li className={`list-group-item ${pathname === '/dashboard'? "active activeli" : ''}`} aria-current="true">Profile</li></Link>
             <Link to={'/dashboard/readlater'} style={{'textDecoration' : "none"}}><li className={`list-group-item ${pathname === '/dashboard/readlater'? "active activeli" : ''}`}>Read Latter</li></Link>
