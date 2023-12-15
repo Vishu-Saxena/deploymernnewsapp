@@ -5,6 +5,7 @@ import { useAuthContext } from '../../context/AuthuserContext';
 import { useNewsContex } from '../../context/AllnewsContex';
 
 const DashForm = ({userDetails , type}) => {
+  console.log(type)
   axios.defaults.withCredentials= true;
     // state to handle registration details
     const[updateUser , setUpdateuser] = useState(userDetails);
@@ -22,6 +23,7 @@ const DashForm = ({userDetails , type}) => {
     // function to handle onSubmit 
     const handleOnsubmit = async(e)=>{
       e.preventDefault();
+      
       try {
         let res = '';
         if(type=== "user"){
