@@ -20,8 +20,10 @@ const AdminNews = () => {
           const res = await axios.get(`https://deploymernnewsapp.vercel.app/api/v1/news/get-news/${_id}`);
           if(res?.data?.success){
             setAmNews(res.data.findNews);
+            return;
           }else{
-            toastfn("no news is created yet .")
+            toastfn("no news is created yet .");
+            return;
           }
       } catch (error) {
           console.log(error);
