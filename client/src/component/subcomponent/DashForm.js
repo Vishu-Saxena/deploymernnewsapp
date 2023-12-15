@@ -25,9 +25,9 @@ const DashForm = ({userDetails , type}) => {
       try {
         let res = '';
         if(type=== "user"){
-          res=  await axios.put('https://deploymernnewsapp.vercel.app/api/v1/auth/update-user' ,  {...updateUser} );
+          res =  await axios.put('https://deploymernnewsapp.vercel.app/api/v1/auth/update-user' ,  {...updateUser} );
         }else{
-          res=  await axios.put('https://deploymernnewsapp.vercel.app/api/v1/auth/update-admin' ,  {...updateUser} );
+          res =  await axios.put('https://deploymernnewsapp.vercel.app/api/v1/auth/update-admin' ,  {...updateUser} );
         }
         
         if(res?.data?.success){
