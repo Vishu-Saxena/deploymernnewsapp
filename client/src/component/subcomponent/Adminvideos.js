@@ -20,12 +20,11 @@ const Adminvideos = () => {
             const res = await axios.get(`https://deploymernnewsapp.vercel.app/api/v1/video/getvideo/${_id}`);
             if(res?.data?.success){
                 setVd(res.data.videos);
-            }else{
-                toastfn("no news is created yet .")
+                return ;
             }
         } catch (error) {
             console.log(error);
-            errortoastfn("Internal error in adding news . Please try again later.")
+            // errortoastfn("Internal error in adding news . Please try again later.")
         }
     }
     useEffect(()=>{
