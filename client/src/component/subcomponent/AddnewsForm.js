@@ -23,6 +23,10 @@ const AddnewsForm = () => {
     }
     const handleOnsubmit= async(e)=>{
       e.preventDefault();
+      if(!news.title || !news.discription || !news.category || !image || !news.content){
+        errortoastfn("Please fill all the feilds properly.");
+        return;
+      }
       console.log("hadle submit");
       try {
         console.log(news , image);
