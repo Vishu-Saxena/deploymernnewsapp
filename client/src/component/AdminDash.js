@@ -35,7 +35,7 @@ const AdminDash = () => {
             <Link to={'/dashboard/delete'} style={{'textDecoration' : "none"}}><li className={`list-group-item ${pathname === '/dashboard/delete'? "active activeli" : ''}`}>Delete Account</li></Link>
           </ul>
         </div>
-        <div className={`col-md-8 fntsz ${pathname !== '/dashboard'? "d-none" : ''}`}><DashForm userDetails={userDetails} /></div>
+        <div className={`col-md-8 fntsz ${pathname !== '/dashboard'? "d-none" : ''}`}><DashForm userDetails={userDetails} type={"admin"} /></div>
         <div className={`col-md-8 fntsz  ${pathname !== '/dashboard/add-itm' ? "d-none" : ''}`}><AddnewsForm/></div>
         <div className={`col-md-8 fntsz  ${pathname !== '/dashboard/add-video' ? "d-none" : ''}`}> <Addvideo/></div>
         <div className={`col-md-8 border fntsz ${pathname !== '/dashboard/allnews' ? "d-none" : ''}`}><AdminNews/></div>
