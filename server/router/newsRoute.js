@@ -42,7 +42,7 @@ router.post('/add-news' , formidale() , async(req ,res)=>{
         const {title , category ,discription ,content , adminId } = req.fields;
         // console.log(title , category ,discription ,content ,adminId );
         const{image} = req.files;
-        if(!title || !category || !discription || !content || !keywords){
+        if(!title || !category || !discription || !content){
             return res.status(500).send({message : "required fields are not filled properly" , success :false})
         }
         if(image.size > 1000000){

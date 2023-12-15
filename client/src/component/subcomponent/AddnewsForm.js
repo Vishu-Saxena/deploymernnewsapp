@@ -26,7 +26,7 @@ const AddnewsForm = () => {
       console.log("hadle submit");
       try {
         console.log(news , image);
-        const newsData = new FormData()
+        const newsData = new FormData();
         newsData.append("title", news.title);
         newsData.append("discription",news.discription);
         newsData.append("category", news.category);
