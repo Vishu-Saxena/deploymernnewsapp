@@ -22,12 +22,12 @@ const AdminNews = () => {
             setAmNews(res.data.findNews);
             return;
           }else{
-            toastfn("no news is created yet .");
+            // toastfn("no news is created yet .");
             return;
           }
       } catch (error) {
           console.log(error);
-          errortoastfn("some internal error occured . please try again latter")
+          // errortoastfn("some internal error occured . please try again latter")
       }
   }
 
