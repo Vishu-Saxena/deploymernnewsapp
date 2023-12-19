@@ -24,7 +24,7 @@ const DetailnedNews = () => {
         newsInfo(id);
     },[]);
   return (
-    <div className='container'>
+    <div className='container' style={{'minHeight' : '18vh'}}>
         {!news.title ? <h4 className='text-center'> loading... </h4> : 
             <>
             <div className="row justify-content-center my-2"><h2 className="text-center txtstyle mb-4"> {news.title} </h2>
