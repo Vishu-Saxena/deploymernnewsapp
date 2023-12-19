@@ -20,24 +20,37 @@ const NewsCard2 = ({news , type}) => {
     const addtolist = async(newsid)=>{
         // toastfn("news added to readlatter list.");
         try {
-            const res = await axios.put(`https://deploymernnewsapp.vercel.app/api/v1/auth/readlist`, {newsid , userID , isadmin } );
-            if(res?.data?.success){
-               toastfn("news added to read latter list.")
-               setIcon(false);
-            }else{errortoastfn("Cannot add this news to read latter list right now . please try again latter.")}
+            if(userID){
+                const res = await axios.put(`https://deploymernnewsapp.vercel.app/api/v1/auth/readlist`, {newsid , userID , isadmin } );
+                if(res?.data?.success){
+                toastfn("news added to read latter list.")
+                setIcon(false);
+                }else{errortoastfn("Cannot add this news to read latter list right now . please try again latter.")}
+            }else{
+                errortoastfn("You are not logged in.");
+                return;
+            }
+            
         } catch (error) {
-            errortoastfn("Some internal error has occured please try again later.")
+            errortoastfn("Some internal error has occured please try again later.");
+            console.log(error);
         }
     }
     // funtion to to remove from readlist
     const removefromlist=async(newsid)=>{
         try {
-            const res = await axios.put(`https://deploymernnewsapp.vercel.app/api/v1/auth/removefromreadlist`, {newsid , userID ,isadmin } );
-            if(res?.data?.success){
-                toastfn("news removed to read latter list.");
-                setIcon(true);
-                if(type){window.location.reload()}
-            }else{errortoastfn("Cannot remove this news from read latter list right now . please try again latter.")}
+            if(userID){
+                const res = await axios.put(`https://deploymernnewsapp.vercel.app/api/v1/auth/removefromreadlist`, {newsid , userID ,isadmin } );
+                if(res?.data?.success){
+                    toastfn("news removed to read latter list.");
+                    setIcon(true);
+                    if(type){window.location.reload()}
+                }else{errortoastfn("Cannot remove this news from read latter list right now . please try again latter.")}
+            }
+            else{
+                errortoastfn("You are not logged in.");
+                return;
+            }
         } catch (error) {
             errortoastfn("Some internal error has occured please try again later.")
         }
